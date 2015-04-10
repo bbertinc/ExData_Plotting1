@@ -1,4 +1,4 @@
-## plot2.R
+## plot3.R
 
 ## Read The Full Data into a Data Frame
 epcdata <- read.csv("./data/household_power_consumption.txt",sep=";",

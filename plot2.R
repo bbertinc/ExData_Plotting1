@@ -8,6 +8,7 @@ epcdata <- read.csv("./data/household_power_consumption.txt",sep=";",
 usedata <- subset(epcdata, Date == "1/2/2007" | Date == "2/2/2007")
 
 ## Convert Date strings to date objects
+usedata$Date <- as.Date(usedata$Date,format="%d/%m/%Y")
 fulldates <- strptime(paste(usedata$Date,usedata$Time),
                       format="%Y-%m-%d %H:%M:%S")
 

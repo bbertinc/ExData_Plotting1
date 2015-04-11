@@ -12,6 +12,9 @@ usedata$Date <- as.Date(usedata$Date,format="%d/%m/%Y")
 fulldates <- strptime(paste(usedata$Date,usedata$Time),
                       format="%Y-%m-%d %H:%M:%S")
 
+## Initialize plot parameters
+par(mar=c(6,4.5,5,2.5),cex=0.75)
+
 ## Plot Power against Time
 with(usedata, plot(fulldates,Global_active_power,type="n",
                    xlab="",ylab="Global Active Power (kilowatts)"))
